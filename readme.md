@@ -80,10 +80,11 @@ Para executar este projeto, você precisará ter instalado:
 
 4.  **Execute os testes:**
     * **Modo Visual (Interface do Cypress):**
-        ```bash
-        npx cypress open
-        ```
+    ```bash
+    npx cypress open
+    ```
     * **Modo Headless (Terminal):**
-        ```bash
-        npx cypress run
-        ```
+    ```bash
+    npx cypress run
+    ```
+
