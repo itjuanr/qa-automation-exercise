@@ -6,7 +6,8 @@ class ContatoPage {
         inputAssunto: () => cy.get('[data-qa="subject"]'),
         inputMensagem: () => cy.get('[data-qa="message"]'),
         botaoAnexo: () => cy.get('[name="upload_file"]'),
-        botaoEnviar: () => cy.get('[data-qa="submit-button"]')
+        botaoEnviar: () => cy.get('[data-qa="submit-button"]'),
+        statusSucesso: () => cy.contains('Success! Your details have been submitted successfully.')
     }
 
     validarPaginaDeContato() {
@@ -21,6 +22,8 @@ class ContatoPage {
         this.get.inputMensagem().type(mensagem);
         this.get.botaoAnexo().attachFile(anexo);
         this.get.botaoEnviar().click();
+        // Validação de sucesso (Assertion)
+        this.get.statusSucesso().should('be.visible');
     }
 }
 
